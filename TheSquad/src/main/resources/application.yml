@@ -3,3 +3,8 @@ spring:
     user:
       password: password
       name: quentin
+  datasource:
+    url: jdbc:mysql://localhost:3306/TheSquad
+    username: root
+    password: Naissance.731
+    driver-class-name: com.mysql.jdbc.Driver

@@ -3,3 +3,11 @@ spring:
     user:
       password: password
       name: quentin
+  datasource:
+    url: jdbc:mysql://localhost:6033/app_db
+    username: db_user
+    password: db_user_pass
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 8085

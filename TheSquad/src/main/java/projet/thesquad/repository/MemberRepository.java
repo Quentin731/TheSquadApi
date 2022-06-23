@@ -2,7 +2,6 @@ package projet.thesquad.repository;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-import projet.thesquad.config.DataSourceConfig;
 import projet.thesquad.domain.Member;
 import projet.thesquad.service.MemberRowMapper;
 import projet.thesquad.web.VM.MemberVM;
@@ -22,8 +21,8 @@ public class MemberRepository {
 
     private final JdbcTemplate jdbcTemplate;
 
-    public MemberRepository() {
-        this.jdbcTemplate = new JdbcTemplate(DataSourceConfig.getDataSource());
+    public MemberRepository(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
     }
 
     public int addMember(MemberVM member) {
